@@ -1,0 +1,18 @@
+dict_ = {'key1': 'word_1, text, text, text'}
+
+
+
+def count(word):
+    counters = {}
+    for key, value in dict_.items():
+        print(key)
+        print(type(value), 'it is VALUE')
+        words_count = value.count(word.lower()) # запустили рекурсию где Уже для  СТРОКИ "word_1, text, text, text"
+                             # Вызвали (метод функцию) count, правильно? почему он считает количество word(text)?
+        counters[key] = words_count
+    return counters
+
+
+str_ = 'word_1, text, text, text'
+print(str_.count('w1'))
+print(count('text'))
